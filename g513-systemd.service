@@ -1,0 +1,14 @@
+#Add this file to your /lib/systemd/system/ folder replacing the ExecStart with your executable path..
+
+[Unit]
+Description=G513 LED animation
+
+[Service]
+ExecStart=YOUR_EXECUTABLE_HERE
+Restart=always
+RestartSec=1m
+Type=idle
+Nice=19
+
+[Install]
+WantedBy=multi-user.target
